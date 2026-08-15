@@ -7,12 +7,20 @@ html, body {
     clip-path: inset(0 0 0 0);
 }
 
+#presentation {
+    margin: 0;
+    height: 1080px;
+    width: 1920px;
+    background-color: rgb(0, 0, 0);
+    display: none;
+}
+
 #key-overlay {
     margin: 0;
     height: 1080px;
     width: 1920px;
     background-color: rgb(0, 255, 0);
-    display: flex;
+    display: none;
 }
 
 #key-overlay > #text-overlay {
@@ -54,7 +62,7 @@ html, body {
     width: 1080px;
     background-color: rgb(0, 255, 0);
     position: absolute;
-    z-index: 100;
+    z-index: 10;
     top: 540px;
     left: 1800px;
     transform: translate(-50%, -50%);
