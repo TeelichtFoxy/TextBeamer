@@ -1,0 +1,33 @@
+html {
+    height: 1080px;
+    width: 1920px;
+}
+
+body {
+    margin: 0;
+}
+
+#key-overlay {
+    margin: 0;
+    height: 1080px;
+    width: 1920px;
+    background-color: rgb(0, 255, 0);
+    display: flex;
+}
+
+#key-overlay > #text-overlay {
+    margin: 0;
+    height: 270px;
+    width: 1920px;
+    background-color: rgb(0, 0, 0, 0.5);
+    position: relative;
+    align-self: flex-end;
+    display: flex;
+}
+
+#key-overlay > #text-overlay > #text {
+    margin: auto;
+    max-height: 270px;
+    color: white;
+    font-size: 25px;
+}
