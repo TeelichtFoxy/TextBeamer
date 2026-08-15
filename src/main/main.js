@@ -14,16 +14,30 @@ function createWindows() {
             contextIsolation: false
         }
     });
+    dashboardWindow.loadFile(path.join(__dirname, '../sites/dashboard/index.html'));
 
     // Presentation Window
     const presentationWindow = new BrowserWindow({
         width: 1920,
         height: 1080,
         webPreferences: {
-
+            nodeIntegration: true,
+            contextIsolation: false
         }
-    })
-}
+    });
+    presentationWindow.loadFile(path.join(__dirname, '../sites/presentation/index.html'));
+
+    // Atem Window
+    const atemWindow = new BrowserWindow({
+        width: 1920,
+        height: 1080,
+        webPreferences: {
+            nodeIntegration: true,
+            contextIsolation: false
+        }
+    });
+    atemWindow.loadFile(path.join(__dirname, '../sites/atem/index.html'));
+};
 
 app.whenReady().then(() => {
     createWindows();
@@ -37,6 +51,6 @@ app.whenReady().then(() => {
 
 app.on('window-all-closed', () => {
     if (process.platform !== 'darwin') {
-        app.stop();
+        app.quit();
     };
 });
